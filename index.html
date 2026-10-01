@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+  <title>Lic. Virginia Rubiano | Nutricionista Deportiva</title>
+  <meta name="description" content="Lic. Virginia Rubiano - Nutricionista Deportiva M.P. 5847. Planes personalizados. Reservá tu consulta.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <!-- PANTALLA 1: PRESENTACIÓN -->
+    <div id="screen1" class="screen active">
+      <div class="logo">
+        <img src="image/logo.png" alt="Logo de Virginia Rubiano Nutrición Deportiva">
+      </div>
+
+      <section class="name">
+        <h1>Virginia Rubiano</h1>
+        <br>
+        <p class="license">M.P. 4456 · Lic. en Nutrición</p>
+      </section>
+
+      <div class="divider">
+        <span class="divider-line"></span>
+        <span class="divider-star">✦</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <section class="intro">
+        <h2><span class="welcome-emoji" aria-hidden="true">👋</span> Bienvenido/a</h2>
+        <p class="intro-text">
+          <span class="intro-lead">Hola, soy Vir.</span> Soy Licenciada en Nutrición, especializada en deporte y antropometrista ISAK II.
+          Me dedico a acompañar a quienes buscan mejorar su calidad de vida, construir hábitos, priorizar su salud y potenciar su rendimiento deportivo.
+          <span class="intro-closing">Estoy encantada de acompañarte en este proceso.</span>
+        </p>
+        <div class="features">
+          <div class="feature">
+            <span class="feature-icon">📊</span>
+            <span class="feature-text">Planes personalizados</span>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">📈</span>
+            <span class="feature-text">Seguimiento detallado</span>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">💬</span>
+            <span class="feature-text">Asesoramiento continuo</span>
+          </div>
+        </div>
+      </section>
+      <h3 class="consultation-title"><span>Tipos de consulta</span></h3>
+      <button class="continue-btn" type="button" onclick="goToScreen(2)">
+        DEPORTIVA CON MEDICIÓN ANTROPOMÉTRICA
+      </button>
+      <button class="continue-btn" type="button" onclick="goToScreen(4)">
+        GENERAL
+      </button>
+    </div>
+
+    <!-- PANTALLA 2: DEPORTIVA CON MEDICIÓN ANTROPOMÉTRICA -->
+    <div id="screen2" class="screen">
+      <button class="back-btn" onclick="goToScreen(1)" aria-label="Volver">← Atrás</button>
+
+      <section class="consultation-page">
+        <p class="eyebrow">Nutrición deportiva</p>
+        <h2>Deportiva con medición antropométrica</h2>
+        <p class="section-lead">Elegí la modalidad que mejor acompaña tu proceso.</p>
+
+        <div class="service-list">
+          <article class="service-card featured">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
+              <span class="service-letter">A</span>
+              <div>
+                <h3>Primera vez</h3>
+                <p>Medición antropométrica</p>
+              </div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>60 min</span><strong>$60.000</strong></div>
+              
+              <div class="protocol">
+                <h4>¿Cómo debo ir a la consulta?</h4>
+                <p>Para realizar la medición de la composición corporal es necesario:</p>
+                <ul>
+                  <li>Ropa deportiva: short, calza corta y top deportivo.</li>
+                  <li>Ayuno alimentario de 2 horas. Evitá ingerir grandes cantidades de líquido 30 minutos antes.</li>
+                  <li>Evitá usar cremas corporales.</li>
+                  <li>Evitá realizar actividad física inmediatamente antes.</li>
+                </ul>
+              </div>
+              <button class="service-btn" type="button" onclick="openAppScript('Deportiva - Primera vez')">ELEGIR ESTA OPCIÓN</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
+              <span class="service-letter">B</span>
+              <div>
+                <h3>Primera vez + plan alimentario</h3>
+                <p>Medición y plan personalizado</p>
+              </div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>60 min</span><strong>$100.000</strong></div>
+              
+              <div class="protocol">
+                <h4>¿Cómo debo ir a la consulta?</h4>
+                <p>Para realizar la medición de la composición corporal es necesario:</p>
+                <ul>
+                  <li>Ropa deportiva: short, calza corta y top deportivo.</li>
+                  <li>Ayuno alimentario de 2 horas. Evitá ingerir grandes cantidades de líquido 30 minutos antes.</li>
+                  <li>Evitá usar cremas corporales.</li>
+                  <li>Evitá realizar actividad física inmediatamente antes.</li>
+                </ul>
+              </div>
+              <button class="service-btn" type="button" onclick="openAppScript('Deportiva - Primera vez + plan alimentario')">ELEGIR ESTA OPCIÓN</button>
+            </div>
+          </article>
+
+          <article class="service-card compact">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
+              <span class="service-letter">C</span>
+              <div>
+                <h3>Control de seguimiento</h3>
+                <p>Continuidad del proceso</p>
+              </div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>30 min</span><strong>$60.000</strong></div>
+              
+              <button class="service-btn" type="button" onclick="openAppScript('Deportiva - Control de seguimiento')">ELEGIR ESTA OPCIÓN</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <button class="continue-btn secondary" onclick="openWhatsApp()">
+        📱 CONSULTAR POR WHATSAPP
+      </button>
+    </div>
+
+    <!-- PANTALLA 4: GENERAL -->
+    <div id="screen4" class="screen">
+      <button class="back-btn" onclick="goToScreen(1)" aria-label="Volver">← Atrás</button>
+
+      <section class="consultation-page">
+        <p class="eyebrow">Nutrición personalizada</p>
+        <h2>Consulta general</h2>
+        <p class="section-lead">Elegí la modalidad que mejor acompaña tu proceso.</p>
+
+        <div class="service-list">
+          <article class="service-card featured compact">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
+              <span class="service-letter">A</span>
+              <div><h3>Primera vez</h3><p>Evaluación inicial</p></div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>60 min</span><strong>$45.000</strong></div>
+              
+              <button class="service-btn" type="button" onclick="openAppScript('General - Primera vez')">ELEGIR ESTA OPCIÓN</button>
+            </div>
+          </article>
+
+          <article class="service-card compact">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
+              <span class="service-letter">B</span>
+              <div><h3>Primera vez + plan alimentario</h3><p>Plan personalizado</p></div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>60 min</span><strong>$85.000</strong></div>
+              
+              <button class="service-btn" type="button" onclick="openAppScript('General - Primera vez + plan alimentario')">ELEGIR ESTA OPCIÓN</button>
+            </div>
+          </article>
+
+          <article class="service-card compact">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
+              <span class="service-letter">C</span>
+              <div><h3>Control</h3><p>Seguimiento del proceso</p></div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>30 min</span><strong>$45.000</strong></div>
+              <button class="service-btn" type="button" onclick="openAppScript('General - Control')">ELEGIR ESTA OPCIÓN</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <button class="continue-btn secondary" onclick="openWhatsApp()">
+        📱 CONSULTAR POR WHATSAPP
+      </button>
+    </div>
+
+    <!-- PANTALLA 3: TURNERO -->
+    <div id="screen3" class="screen">
+      <button class="back-btn" onclick="goToScreen(bookingBackScreen)" aria-label="Volver">← Atrás</button>
+
+      <section class="booking">
+        <h2>Selecciona tu turno</h2>
+        <p class="booking-subtitle">Próximas disponibilidades</p>
+
+        <div class="calendar-selector">
+          <div class="month-nav">
+            <button onclick="prevMonth()">← Anterior</button>
+            <span id="currentMonth">Febrero 2025</span>
+            <button onclick="nextMonth()">Siguiente →</button>
+          </div>
+
+          <div class="calendar">
+            <div class="cal-header">
+              <span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sa</span><span>Do</span>
+            </div>
+            <div id="calendarDays" class="cal-days"></div>
+          </div>
+        </div>
+
+        <div id="timeSlots" class="time-slots" style="display: none;">
+          <p id="selectedDate" class="selected-date"></p>
+          <div id="timeOptions" class="time-options"></div>
+        </div>
+
+        <div id="bookingSummary" class="booking-summary" style="display: none;">
+          <h3>Resumen de tu turno</h3>
+          <div class="summary-item">
+            <span>Consulta:</span>
+            <span id="summaryType">Consulta inicial</span>
+          </div>
+          <div class="summary-item">
+            <span>Fecha:</span>
+            <span id="summaryDate"></span>
+          </div>
+          <div class="summary-item">
+            <span>Hora:</span>
+            <span id="summaryTime"></span>
+          </div>
+          <div class="summary-item price">
+            <span>Adelanto:</span>
+            <span id="summaryPrice">$1.500</span>
+          </div>
+          <button class="continue-btn primary" onclick="confirmBooking()">
+            CONFIRMAR Y PAGAR
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="socials">
+        <a class="social" href="https://instagram.com/virrnutricion" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          Instagram
+        </a>
+      </div>
+      <p>COWORKING · VIBRA SALUD · Villa María · Córdoba</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

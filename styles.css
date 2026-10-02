@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --mint: #2D7D6F;
   --mint-dark: #1F5A50;
   --mint-light: #4A9E91;
@@ -903,6 +903,14 @@ main {
 }
 
 /* RESPONSIVE */
+@media (min-width: 768px) {
+  body { padding-top: 56px; }
+  main { max-width: 560px; }
+  .name h1 { font-size: 52px; }
+  .intro-text { font-size: 14px; }
+  .consultation-page h2 { max-width: none; font-size: 34px; }
+  .section-lead { font-size: 13px; }
+}
 @media (max-width: 430px) {
   body { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
 }
